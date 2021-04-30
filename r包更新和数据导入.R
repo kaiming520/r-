@@ -1,44 +1,60 @@
-##rÓïÑÔ¸üĞÂ
+##rè¯­è¨€æ›´æ–°
 install.packages("installr") 
 library(installr) 
-updateR(fast=TRUE,cran_mirror="https://mirrors.ustc.edu.cn/CRAN/") ##¸üĞÂRÈí¼ş
-update.packages(repos = "https://mirrors.ustc.edu.cn/CRAN/",ask='graphics',checkBuilt=TRUE)##¸üĞÂËùÓĞR°ü
+updateR(fast=TRUE,cran_mirror="https://mirrors.ustc.edu.cn/CRAN/") ##æ›´æ–°Rè½¯ä»¶
+update.packages(repos = "https://mirrors.ustc.edu.cn/CRAN/",ask='graphics',checkBuilt=TRUE)##æ›´æ–°æ‰€æœ‰RåŒ…
 
-##µ¼ÈëexcelÊı¾İ
-##·½·¨1
+##å¯¼å…¥excelæ•°æ®
+##æ–¹æ³•1
 install.packages("installr")
 install.packages("installr")
 library(xlsx)
-mydata<-"F:/03Èí¼şÑ§Ï°/Êı¾İ/month_air.xlsx"
-##ÉÏÃæÏÈ·ÅÆú
+mydata<-"F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®/month_air.xlsx"
+##ä¸Šé¢å…ˆæ”¾å¼ƒ
 
-####·½·¨2
+####æ–¹æ³•2
 install.packages("tidyverse")
 install.packages("readxl")
 install.packages("rematch")
 library(tidyverse)
 library(readxl)
-xlsx1 <- read_excel("F:/03Èí¼şÑ§Ï°/Êı¾İ/month_air.xlsx")
-excel_sheets("F:/03Èí¼şÑ§Ï°/Êı¾İ/month_air.xlsx")
-xlsx2 <- read_excel("F:/03Èí¼şÑ§Ï°/Êı¾İ/month_air.xlsx",
-                   sheet=1)#¶ÁÈ¡sheet1¹¤×÷±í
-xlsx3<- read_excel("F:/03Èí¼şÑ§Ï°/Êı¾İ/month_air.xlsx",
-                   n_max = 20)#¶ÁÈ¡Ç°20ĞĞ
-xlsx4<- read_excel("F:/03Èí¼şÑ§Ï°/Êı¾İ/month_air.xlsx",
-                   range = cell_cols("B:D"))#Bµ½DÁĞ
-xlsx5<- read_excel("F:/03Èí¼şÑ§Ï°/Êı¾İ/month_air.xlsx",
-                   range = cell_rows(1:11))#1£º11ĞĞ
-xlsx6<- read_excel("F:/03Èí¼şÑ§Ï°/Êı¾İ/month_air.xlsx",
-                   range = "B1:D11")#B1:D11ÇøÓò
+xlsx1 <- read_excel("F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®/month_air.xlsx")
+excel_sheets("F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®/month_air.xlsx")
+xlsx2 <- read_excel("F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®/month_air.xlsx",
+                   sheet=1)#è¯»å–sheet1å·¥ä½œè¡¨
+xlsx3<- read_excel("F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®/month_air.xlsx",
+                   n_max = 20)#è¯»å–å‰20è¡Œ
+xlsx4<- read_excel("F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®/month_air.xlsx",
+                   range = cell_cols("B:D"))#Båˆ°Dåˆ—
+xlsx5<- read_excel("F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®/month_air.xlsx",
+                   range = cell_rows(1:11))#1ï¼š11è¡Œ
+xlsx6<- read_excel("F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®/month_air.xlsx",
+                   range = "B1:D11")#B1:D11åŒºåŸŸ
 
-#ÆäËû²ÎÊı
-#sheetµ¼ÈëÄ³¸öÌØ¶¨µÄ¹¤×÷±í£¬Ä¬ÈÏµÚÒ»¸ö¹¤×÷±í
-#rangeµ¼Èë±í¸ñÖĞÌØ¶¨ÇøÓòµÄÊı¾İ, Ä¬ÈÏÈ«ÇøÓò
-#col_namesÁĞÃû£¬Ä¬ÈÏÎªTRUE£¨µÚÒ»ĞĞÎªÁĞÃû£©
-#ÉèÖÃÎªFÔòÁĞÃûÎªX1¡¢X2¡­Ò²¿ÉÍ¨¹ıÒ»¸öÏòÁ¿ÉèÖÃÌØ¶¨ÁĞÃû
-#col_type	ÁĞµÄÊı¾İÀàĞÍ
-#n_maxÉèÖÃ¶ÁÈ¡×î´óµÄĞĞÊı
-#na	Ä¬ÈÏ±íÊ¾Êı¾İÖĞµÄÈ±Ê§Öµ£¬
-#   Ò²¿ÉÒÔ½«ÌØ¶¨ÖµÉèÖÃÎª È±Ê§Öµ
+#å…¶ä»–å‚æ•°
+#sheetå¯¼å…¥æŸä¸ªç‰¹å®šçš„å·¥ä½œè¡¨ï¼Œé»˜è®¤ç¬¬ä¸€ä¸ªå·¥ä½œè¡¨
+#rangeå¯¼å…¥è¡¨æ ¼ä¸­ç‰¹å®šåŒºåŸŸçš„æ•°æ®, é»˜è®¤å…¨åŒºåŸŸ
+#col_namesåˆ—åï¼Œé»˜è®¤ä¸ºTRUEï¼ˆç¬¬ä¸€è¡Œä¸ºåˆ—åï¼‰
+#è®¾ç½®ä¸ºFåˆ™åˆ—åä¸ºX1ã€X2â€¦ä¹Ÿå¯é€šè¿‡ä¸€ä¸ªå‘é‡è®¾ç½®ç‰¹å®šåˆ—å
+#col_type	åˆ—çš„æ•°æ®ç±»å‹
+#n_maxè®¾ç½®è¯»å–æœ€å¤§çš„è¡Œæ•°
+#na	é»˜è®¤è¡¨ç¤ºæ•°æ®ä¸­çš„ç¼ºå¤±å€¼ï¼Œ
+#   ä¹Ÿå¯ä»¥å°†ç‰¹å®šå€¼è®¾ç½®ä¸º ç¼ºå¤±å€¼
+####å¯¼å…¥sasæ•°æ®
+#æ–¹æ³•1 Hmisc
+library("Hmisc")
+datadir<-"F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®"#æ•°æ®æ‰€åœ¨è·¯å¾„
+sasexe<-"D:/Program Files/SASHOME/SASFoundation/9.4/sas.exe"#sasè¿è¡Œç¨‹åºè·¯å¾„
+mydata<-sas.get(libraryName = datadir,member="month",
+               sasprog = sasexe)
+
+####å¯¼å…¥csvæ ¼å¼æ–‡ä»¶
+mydata1<-read.table("F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®/month.csv",
+                   header = TRUE,sep = ",")
+
+####å¯¼å…¥stataæ•°æ®
+install.packages("foreign")
+library(foreign)
+mydata2<-read.dta("F:/03è½¯ä»¶å­¦ä¹ /æ•°æ®/month.dta")
 
 
